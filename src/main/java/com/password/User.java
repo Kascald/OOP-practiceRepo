@@ -1,5 +1,6 @@
 package com.password;
 
+import com.password.gen.PasswordGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -8,11 +9,15 @@ public class User {
 
 	private String password;
 
-	public void initPassword() {
-		RandomPasswordGenerator randomPasswordGenerator = new RandomPasswordGenerator();
-		String randomPassword = randomPasswordGenerator.generatePassword();
+	public void initPassword(PasswordGenerator passwordGenerator) {
+		//as - is 방식 - 강한 결합도를 가진다
+        //RandomPasswordGenerator randomPasswordGenerator = new RandomPasswordGenerator();
 
-		logger.info("User Password = {}", this.password);
+		//to - be 방식 - 약한 결합도를 가진다
+		//String randomPassword = randomPasswordGenerator.generatePassword();
+		String randomPassword = passwordGenerator.generatePassword();
+
+		logger.info("User Password = {} | will change = {} , len = {}", this.password , randomPassword, randomPassword.length());
 
 		if(randomPassword.length() >= 8 && randomPassword.length() <= 12) {
 			this.password = randomPassword;

@@ -6,6 +6,7 @@ package com.password;
  *
  * */
 
+import com.password.gen.PasswordValidator;
 import com.password.scenario.JoinRequest;
 import com.password.scenario.ParameterizedTestPractice;
 import org.junit.jupiter.api.DisplayName;

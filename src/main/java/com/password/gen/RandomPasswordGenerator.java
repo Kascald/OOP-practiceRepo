@@ -1,11 +1,11 @@
-package com.password;
+package com.password.gen;
 
 import org.passay.CharacterData;
 import org.passay.CharacterRule;
 import org.passay.EnglishCharacterData;
 import org.passay.PasswordGenerator;
 
-public class RandomPasswordGenerator {
+public class RandomPasswordGenerator implements com.password.gen.PasswordGenerator {
 	public static final String ALLOWED_SPL_CHARACTERS = "!@#$%^&*()_+";
 
 	public static final String ERROR_CODE = "특수문자 오류 발생";

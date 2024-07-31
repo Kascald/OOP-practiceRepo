@@ -1,4 +1,4 @@
-package com.password;
+package com.password.gen;
 
 public class PasswordValidator {
 
