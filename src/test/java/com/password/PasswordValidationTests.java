@@ -85,7 +85,7 @@ public class PasswordValidationTests {
 	@ParameterizedTest
 	@CsvSource({
 			"myTest@test.com, true",
-			"test@example.com, true",
+			"test@practice.com, true",
 			"invalid-email@, false",
 			"user@domain.co, true",
 			"user.name@domain.com, true",
