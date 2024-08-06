@@ -3,7 +3,7 @@ plugins {
     id 'me.champeau.jmh' version '0.6.8'
 }
 
-group = 'com.password'
+group = 'com.passwordGenerator'
 version = '1.0-SNAPSHOT'
 
 repositories {
